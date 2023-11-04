@@ -6,7 +6,7 @@ import colors from '../constants/styles';
 const ExplorePage = () => {
     // Get the city parameter from the URL
     const { city } = useParams();
-    const projectData = [
+    const dummyData = [
         {
             title: "BloggersZone",
             desc: "A blog Website",
@@ -68,16 +68,16 @@ const ExplorePage = () => {
             </h1>
 
             <div className="xl:w-2/3 flex flex-wrap justify-center items-center gap-y-5 gap-x-5 mb-4 mx-auto">
-                {projectData.map((project, index) => (
+                {dummyData.map((data, index) => (
                     <DataCards
                         key={index}
-                        solo={project.solo}
-                        title={project.title}
-                        src={project.src} // You might want to use a specific image for each project
-                        desc={project.desc}
-                        link={project.link}
-                        github={project.github}
-                        skills={project.skills}
+
+                        title={data.title}
+                        src={data.src} // You might want to use a specific image for each project
+                        desc={data.desc}
+                        link={data.link}
+                        github={data.github}
+                        skills={data.skills}
                     />
                 ))}
             </div>
