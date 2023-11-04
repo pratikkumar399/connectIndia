@@ -56,7 +56,7 @@ const NavBar = () => {
                     to="#"
                     download
                 >
-                    RESUME
+                    Login/Logout
                 </Link>
             </nav>
             <div className={`navbar-menu relative z-50 ${menuOpen ? 'block' : 'hidden'}`}>
@@ -103,7 +103,7 @@ const NavBar = () => {
                                 className="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl"
                                 to="#"
                             >
-                                Resume
+                                Login/Logout
                             </Link>
 
                         </div>
