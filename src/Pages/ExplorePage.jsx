@@ -63,7 +63,7 @@ const ExplorePage = () => {
     ];
     return (
         <div className="p-8">
-            <h1 style={{ color: colors.primary }} className="text-4xl text-center font-bold mb-6">
+            <h1 style={{ color: colors.primary }} className="text-3xl text-center font-bold mb-6">
                 Places to visit in {city}
             </h1>
 

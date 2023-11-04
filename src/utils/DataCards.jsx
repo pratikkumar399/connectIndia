@@ -2,7 +2,7 @@ import colors from '../constants/styles';
 import { Link } from "react-router-dom";
 
 
-const DataCards = ({ solo = "solo", src, title, desc, skills, link, github }) => {
+const DataCards = ({ src, title, desc, skills, link, github }) => {
     return (
         <div className="max-w-sm bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition duration-500">
 

@@ -40,9 +40,9 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
-              <Route path="/explore/:city" element={<ExplorePage />} />
               <Route path="/accomodations/:city" element={<Accomodation />} />
               <Route path="/guides/:city" element={<Guides />} />
+              <Route path="/explore/:city" element={<ExplorePage />} />
 
             </Route>
             {/* Use the imported PrivateRoute component */}
