@@ -5,6 +5,9 @@ import Signup from "./authenticartion/Signup/Signup";
 import Home from './Pages/Home';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+import ExplorePage from './Pages/ExplorePage';
+import Accomodation from './Pages/Accomodation';
+import Guides from './Pages/Guides';
 
 const Layout = () => {
   return (
@@ -37,6 +40,10 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
+              <Route path="/explore/:city" element={<ExplorePage />} />
+              <Route path="/accomodations/:city" element={<Accomodation />} />
+              <Route path="/guides/:city" element={<Guides />} />
+
             </Route>
             {/* Use the imported PrivateRoute component */}
           </Routes>
