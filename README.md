@@ -112,3 +112,6 @@ We appreciate your contributions and look forward to working together to improve
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 Happy traveling with the Travel Explorer App! 🌍✈️
+
+## Project Flow:
+![Alt text](connectindiaflow.png)
