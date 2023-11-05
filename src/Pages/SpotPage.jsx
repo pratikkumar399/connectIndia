@@ -3,6 +3,7 @@ import { CloseOutlined } from '@ant-design/icons';
 import { Link, useParams } from "react-router-dom";
 import { dummyExploreData } from "../dummyData/dummyExploreData"; // Import your dummy data
 
+
 import { Button } from 'antd';
 
 const SpotPage = () => {
