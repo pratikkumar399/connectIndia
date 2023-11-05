@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { CloseOutlined } from '@ant-design/icons';
 const Chatbox = ({ predefinedMessages = [] }) => {
     const [isChatboxOpen, setIsChatboxOpen] = useState(true);
     const [userInput, setUserInput] = useState('');
@@ -27,6 +27,9 @@ const Chatbox = ({ predefinedMessages = [] }) => {
     const handleInputChange = (event) => {
         setUserInput(event.target.value);
     };
+    const handleClick = () => {
+        window.history.back();
+    }
 
     const handleInputKeyPress = (event) => {
         if (event.key === 'Enter') {
@@ -35,7 +38,7 @@ const Chatbox = ({ predefinedMessages = [] }) => {
     };
 
     return (
-        <>
+        <> <CloseOutlined className="float-right text-3xl mx-20 cursor-pointer" onClick={handleClick} />
             <div className={`flex justify-center items-center my-20 ${isChatboxOpen ? '' : 'hidden'}`}>
                 <div className="border-2 bg-white shadow-md rounded-lg max-w-lg w-full">
                     <div className="p-4 border-b bg-blue-500 text-white rounded-t-lg flex justify-between items-center">
@@ -90,6 +93,8 @@ const Chatbox = ({ predefinedMessages = [] }) => {
                         </button>
                     </div>
                 </div>
+
+
             </div>
         </>
     );

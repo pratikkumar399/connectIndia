@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import color from '../constants/styles'
 import { useState } from "react";
+import logo from "../assets/ConnectIndiaLogo.png"
 
 const NavBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);

@@ -2,6 +2,7 @@ import backgroundImage from "../assets/backgroundImg.jpg"
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Input, Select, Space, Button } from 'antd';
+import logo from "../assets/ConnectIndia-logos_transparent.png"
 
 
 const options = [
@@ -64,7 +65,7 @@ const Hero = () => {
                         <div className="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2">
                             <img
                                 className="w-full h-full max-w-md"
-                                src="https://merakiui.com/images/components/Email-campaign-bro.svg"
+                                src={logo}
                                 alt="email illustrat`ion vector art"
                             />
                         </div>
