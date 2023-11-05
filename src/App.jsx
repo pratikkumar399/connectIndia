@@ -11,6 +11,7 @@ import Guides from './Pages/Guides';
 import SpotPage from './Pages/SpotPage';
 import AccomodationPage from './Pages/AccomodationPage';
 import GuidePage from './Pages/GuidePage';
+import Chatbox from '../virtualAssistance/Chatbox';
 
 const Layout = () => {
   return (
@@ -30,10 +31,6 @@ const Layout = () => {
 
 
 function App() {
-
-
-
-
   return (
     <>
       <Router>
@@ -51,6 +48,7 @@ function App() {
             <Route path="/explore/:city/:title" element={<SpotPage />} />
             <Route path="/accomodations/:city/:hotel" element={<AccomodationPage />} />
             <Route path="/guides/:city/:guide" element={<GuidePage />} />
+            <Route path="/explore/:city/chatbox" element={<Chatbox />} />
             {/* Use the imported PrivateRoute component */}
           </Routes>
 

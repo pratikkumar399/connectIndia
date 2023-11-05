@@ -2,6 +2,7 @@ import SpotCarousel from "../utils/SpotCarousel";
 import { CloseOutlined } from '@ant-design/icons';
 import { useParams } from "react-router-dom";
 import { dummyExploreData } from "../dummyData/dummyExploreData"; // Import your dummy data
+import GuideCard from "../utils/GuideCard";
 
 const GuidePage = () => {
     const { guide } = useParams(); // Get the "title" parameter from the URL
@@ -29,9 +30,7 @@ const GuidePage = () => {
     return (
         <div>
             <CloseOutlined className="float-right text-3xl mx-20 cursor-pointer" onClick={handleClick} />
-            <SpotCarousel />
-            <h2 className="text-center text-4xl">Welcome to {formattedTitle}</h2>
-            <p className="text-center text-lg">{description}</p>
+            <GuideCard />
         </div>
     )
 }

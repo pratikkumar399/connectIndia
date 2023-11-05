@@ -1,7 +1,9 @@
 import SpotCarousel from "../utils/SpotCarousel";
 import { CloseOutlined } from '@ant-design/icons';
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { dummyExploreData } from "../dummyData/dummyExploreData"; // Import your dummy data
+
+import { Button } from 'antd';
 
 const SpotPage = () => {
     const { title } = useParams(); // Get the "title" parameter from the URL
@@ -32,6 +34,9 @@ const SpotPage = () => {
             <SpotCarousel />
             <h2 className="text-center text-4xl">Welcome to {formattedTitle}</h2>
             <p className="text-center text-lg">{description}</p>
+            <Button type="primary" className="flex mx-auto bg-black">
+                <Link to={`/explore/${title}/chatbox`}>Chat with virtual app</Link>
+            </Button>
         </div>
     )
 }
