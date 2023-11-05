@@ -1,23 +1,26 @@
 import colors from '../constants/styles';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
+const DataCards = ({ src, title, desc, skills, link }) => {
+    const location = useLocation();
 
-const DataCards = ({ src, title, desc, skills, link, github }) => {
+    // Create a URL-safe version of the title for the route
+    const titleParam = title.toLowerCase().replace(/\s+/g, '-');
+
+    // Create the relative URL by appending the titleParam to the current pathname
+    const relativeURL = `${location.pathname}/${titleParam}`;
+
     return (
         <div className="max-w-sm bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition duration-500">
-
             <div className="relative">
-                <Link to={github}>
+                <Link to={relativeURL}>
                     <img
                         className="w-full h-50 cover rounded-xl"
                         src={src}
                     />
                 </Link>
-
             </div>
-            <Link style={{
-                target: '_blank',
-            }} to={link}>
+            <Link style={{ target: '_blank' }} to={link}>
                 <h1 className="mt-4 text-gray-800 text-2xl font-bold cursor-pointer">
                     {title}
                 </h1>
@@ -61,12 +64,14 @@ const DataCards = ({ src, title, desc, skills, link, github }) => {
                     </span>
                     <p>{skills}</p>
                 </div>
-
-                <button style={{
-                    backgroundColor: colors.buttonback,
-                }}
+                <button
+                    style={{
+                        backgroundColor: colors.buttonback,
+                    }}
                     className="mt-4 text-xl w-full text-white bg-indigo-600 py-2 rounded-xl shadow-lg">
-                    View More
+                    <Link to={relativeURL}>
+                        View More
+                    </Link>
                 </button>
             </div>
         </div>
