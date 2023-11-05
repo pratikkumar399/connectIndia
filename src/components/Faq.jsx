@@ -4,34 +4,34 @@ import FaqItem from '../utils/FaqItem'; // Import the FaqItem component
 const Faq = () => {
     const faqItems = [
         {
-            question: 'What can I expect at my first consultation?',
+            question: 'What is our problem statement?',
             answer:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident placeat, consequatur eveniet veritatis quos dignissimos beatae dolores exercitationem laboriosam officia magnam atque blanditiis illum doloremque magni ex corrupti tempora quis.',
+                'When a traveler visits a city for the very first time, he/she is completely unknown about how to explore the beautiful and worthy places to explore',
         },
         {
-            question: 'What can I expect at my first consultation?',
+            question: 'What is our solution ?',
             answer:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident placeat, consequatur eveniet veritatis quos dignissimos beatae dolores exercitationem laboriosam officia magnam atque blanditiis illum doloremque magni ex corrupti tempora quis.',
+                'It is an all-in-one website which offers three major options collectively based on the city the user is searching for- Explore, Accommodation Booking and Guide Booking.',
         },
         {
-            question: 'What can I expect at my first consultation?',
+            question: 'What is Explore section about?',
             answer:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident placeat, consequatur eveniet veritatis quos dignissimos beatae dolores exercitationem laboriosam officia magnam atque blanditiis illum doloremque magni ex corrupti tempora quis.',
+                'In this section, the user gets to explore all the tourist attractions of the city he/she entered with ample of images of each site',
         },
         {
-            question: 'What can I expect at my first consultation?',
+            question: 'What is Accommodations section about?',
             answer:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident placeat, consequatur eveniet veritatis quos dignissimos beatae dolores exercitationem laboriosam officia magnam atque blanditiis illum doloremque magni ex corrupti tempora quis.',
+                'This section allows user to book an accommodation.',
         },
         {
-            question: 'What can I expect at my first consultation?',
+            question: 'What is Guides section about?',
             answer:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident placeat, consequatur eveniet veritatis quos dignissimos beatae dolores exercitationem laboriosam officia magnam atque blanditiis illum doloremque magni ex corrupti tempora quis.',
+                'This section allows user to book a local guide.',
         },
         {
-            question: 'What can I expect at my first consultation?',
+            question: 'What is Rahi?',
             answer:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident placeat, consequatur eveniet veritatis quos dignissimos beatae dolores exercitationem laboriosam officia magnam atque blanditiis illum doloremque magni ex corrupti tempora quis.',
+                'The user can ask questions to the virtual guide “Rahi" and can get the detailed responses',
         },
         // Add more FAQ items here
     ];
