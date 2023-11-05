@@ -32,7 +32,7 @@ function Signup() {
                 await updateProfile(user, {
                     displayName: values.name,
                 });
-                navigate("/");
+                navigate("/login");
             })
             .catch((err) => {
                 setSubmitButtonDisabled(false);
@@ -75,7 +75,7 @@ function Signup() {
                     <p>
                         Already have an account?{" "}
                         <span>
-                            <Link to="/">Login</Link>
+                            <Link to="/login">Login</Link>
                         </span>
                     </p>
                 </div>

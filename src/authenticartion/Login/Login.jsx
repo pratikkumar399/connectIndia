@@ -27,7 +27,7 @@ function Login() {
     login(values.email, values.pass)
       .then(async (res) => {
         setSubmitButtonDisabled(false);
-        navigate("/home");
+        navigate("/");
       })
       .catch((err) => {
         setSubmitButtonDisabled(false);
