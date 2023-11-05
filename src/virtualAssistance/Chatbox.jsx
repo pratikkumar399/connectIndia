@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { CloseOutlined } from '@ant-design/icons';
+
 const Chatbox = ({ predefinedMessages = [] }) => {
     const [isChatboxOpen, setIsChatboxOpen] = useState(true);
     const [userInput, setUserInput] = useState('');
@@ -20,16 +21,42 @@ const Chatbox = ({ predefinedMessages = [] }) => {
         if (userInput.trim() !== '') {
             // Add the user's message to the chatMessages state
             setChatMessages([...chatMessages, { text: userInput, isUserMessage: true }]);
+            const chatbotResponse = generateChatbotResponse(userInput);
+            setChatMessages([...chatMessages, { text: chatbotResponse, isUserMessage: false }]);
+
             setUserInput('');
         }
     };
 
+    const generateChatbotResponse = (userMessage) => {
+        // Convert user input to lowercase for case-insensitive matching
+        const userToLower = userMessage.toLowerCase();
+
+        if (userToLower.includes('hello') || userToLower.includes('hi')) {
+            return "Hello! How can I assist you with your travel plans?";
+        } else if (userToLower.includes('destination')) {
+            return "Sure, where would you like to go on your next adventure?";
+        } else if (userToLower.includes('recommend')) {
+            return "I recommend visiting the beautiful palaces of Jaipur.";
+        } else if (userToLower.includes('weather')) {
+            return "The weather in your chosen destination is typically pleasant during this season.";
+        } else if (userToLower.includes('flights')) {
+            return "I can help you find the best flights for your trip. Please provide your departure and arrival cities.";
+        } else if (userToLower.includes('accommodation')) {
+            return "I can suggest some great hotels in your chosen destination. Do you have a preference for a specific type of accommodation?";
+        } else {
+            return "I'm here to help you plan your dream vacation. Ask me anything related to travel!";
+        }
+    };
+
+
     const handleInputChange = (event) => {
         setUserInput(event.target.value);
     };
+
     const handleClick = () => {
         window.history.back();
-    }
+    };
 
     const handleInputKeyPress = (event) => {
         if (event.key === 'Enter') {
@@ -38,7 +65,8 @@ const Chatbox = ({ predefinedMessages = [] }) => {
     };
 
     return (
-        <> <CloseOutlined className="float-right text-3xl mx-20 cursor-pointer" onClick={handleClick} />
+        <>
+            <CloseOutlined className="float-right text-3xl mx-20 cursor-pointer" onClick={handleClick} />
             <div className={`flex justify-center items-center my-20 ${isChatboxOpen ? '' : 'hidden'}`}>
                 <div className="border-2 bg-white shadow-md rounded-lg max-w-lg w-full">
                     <div className="p-4 border-b bg-blue-500 text-white rounded-t-lg flex justify-between items-center">
@@ -93,8 +121,6 @@ const Chatbox = ({ predefinedMessages = [] }) => {
                         </button>
                     </div>
                 </div>
-
-
             </div>
         </>
     );
