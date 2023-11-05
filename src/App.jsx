@@ -5,9 +5,13 @@ import Signup from "./authenticartion/Signup/Signup";
 import Home from './Pages/Home';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
-import ExplorePage from './Pages/ExplorePage';
+import ExplorePage from './Pages/Explore';
 import Accomodation from './Pages/Accomodation';
 import Guides from './Pages/Guides';
+import SpotPage from './Pages/SpotPage';
+import AccomodationPage from './Pages/AccomodationPage';
+import GuidePage from './Pages/GuidePage';
+import Chatbox from '../virtualAssistance/Chatbox';
 
 const Layout = () => {
   return (
@@ -27,10 +31,6 @@ const Layout = () => {
 
 
 function App() {
-
-
-
-
   return (
     <>
       <Router>
@@ -45,6 +45,10 @@ function App() {
               <Route path="/explore/:city" element={<ExplorePage />} />
 
             </Route>
+            <Route path="/explore/:city/:title" element={<SpotPage />} />
+            <Route path="/accomodations/:city/:hotel" element={<AccomodationPage />} />
+            <Route path="/guides/:city/:guide" element={<GuidePage />} />
+            <Route path="/explore/:city/chatbox" element={<Chatbox />} />
             {/* Use the imported PrivateRoute component */}
           </Routes>
 

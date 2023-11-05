@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import explore from '../assets/explore/place.jpg';
 import DataCards from '../utils/DataCards';
 import colors from '../constants/styles';
-const ExplorePage = () => {
+const Explore = () => {
     // Get the city parameter from the URL
     const { city } = useParams();
     const dummyData = [
@@ -18,7 +18,7 @@ const ExplorePage = () => {
             title: "Hawa Mahal",
             timing: "9:00 am – 4:30 pm",
             link: "",
-            src:explore,
+            src: explore,
             alias: "Palace of winds",
         },
         {
@@ -74,4 +74,4 @@ const ExplorePage = () => {
     );
 };
 
-export default ExplorePage;
+export default Explore;
