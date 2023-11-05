@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 
-import subscription from '../assets/subscription.png';
+import explore from '../assets/explore/place.jpg';
 import DataCards from '../utils/DataCards';
 import colors from '../constants/styles';
 const ExplorePage = () => {
@@ -8,56 +8,46 @@ const ExplorePage = () => {
     const { city } = useParams();
     const dummyData = [
         {
-            title: "BloggersZone",
-            desc: "A blog Website",
-            link: "https://bloggerszone.vercel.app/",
-            src: subscription,
-            solo: "solo",
-            github: "https://github.com/pratikkumar399/bloggerszone",
-            skills: "React, NodeJs, Express, MongoDB",
+            title: "Amber Fort",
+            timing: "8:00 am – 5:00 pm",
+            link: "",
+            src: explore,
+            alias: "Hilltop opulence",
         },
         {
-            title: "CollegeGram",
-            desc: "A social media website for college students",
-            link: "https://github.com/pratikkumar399/collegegram",
-            solo: "solo",
-            src: subscription,
-            github: "https://github.com/pratikkumar399/collegegram",
-            skills: "React, NodeJs, MongoDB",
+            title: "Hawa Mahal",
+            timing: "9:00 am – 4:30 pm",
+            link: "",
+            src:explore,
+            alias: "Palace of winds",
         },
         {
-            title: "Subscription Website",
-            desc: "A website where users can subscribe to a plan and pay for it",
-            link: "https://subscription-app-7yvq.vercel.app/",
-            solo: "solo",
-            src: subscription,
-            github: "https://github.com/pratikkumar399/SubscriptionApp",
-            skills: "React, Firebase, Stripe, NodeJs ",
+            title: "City Palace",
+            timing: "9:30 am – 5:00 pm",
+            link: "",
+            src: explore,
+            alias: "Royal heritage hub",
         },
         {
-            title: "Shiksha Miraz",
-            desc: "A flutter based website for education purpose",
-            link: "https://yourname.dev/",
-            solo: "group",
-            src: subscription,
-            github: "https://github.com/yourusername/portfolio",
-            skills: "HTML, CSS, JavaScript",
+            title: "Jantar Mantar",
+            timing: "9:00 am – 4:30 pm",
+            link: "",
+            src: explore,
+            alias: "Astronomer’s delight",
         },
         {
-            title: "Portfolio Website",
-            desc: "My personal portfolio showcasing my work",
-            link: "https://yourname.dev/",
-            src: subscription,
-            github: "https://github.com/yourusername/portfolio",
-            skills: "HTML, CSS, JavaScript",
+            title: "Jaigarh Fort",
+            timing: "9:30 am – 4:30 pm",
+            link: "",
+            src: explore,
+            alias: "Majestic stronghold",
         },
         {
-            title: "Portfolio Website",
-            desc: "My personal portfolio showcasing my work",
-            link: "https://yourname.dev/",
-            src: subscription,
-            github: "https://github.com/yourusername/portfolio",
-            skills: "HTML, CSS, JavaScript",
+            title: "Nahargarh Fort",
+            timing: "10:00 am – 5:30 pm",
+            link: "",
+            src: explore,
+            alias: "Hillside panorama",
         },
         // Add more project objects here...
     ];
@@ -74,10 +64,9 @@ const ExplorePage = () => {
 
                         title={data.title}
                         src={data.src} // You might want to use a specific image for each project
-                        desc={data.desc}
+                        desc={data.timing}
                         link={data.link}
-                        github={data.github}
-                        skills={data.skills}
+                        skills={data.alias}
                     />
                 ))}
             </div>

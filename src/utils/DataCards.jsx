@@ -66,7 +66,7 @@ const DataCards = ({ src, title, desc, skills, link, github }) => {
                     backgroundColor: colors.buttonback,
                 }}
                     className="mt-4 text-xl w-full text-white bg-indigo-600 py-2 rounded-xl shadow-lg">
-                    View Places
+                    View More
                 </button>
             </div>
         </div>
