@@ -34,8 +34,11 @@ const SpotPage = () => {
             <SpotCarousel />
             <h2 className="text-center text-4xl">Welcome to {formattedTitle}</h2>
             <p className="text-center text-lg">{description}</p>
-            <Button type="primary" className="flex mx-auto bg-black">
+            <Button type="primary" className="flex my-4 mx-auto bg-black">
                 <Link to={`/explore/${title}/chatbox`}>Chat with virtual app</Link>
+            </Button>
+            <Button type="primary" className="flex my-4 mx-auto bg-black">
+                <Link to={`/explore/${title}/interested`}>Interested?</Link>
             </Button>
         </div>
     )

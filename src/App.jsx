@@ -11,7 +11,7 @@ import Guides from './Pages/Guides';
 import SpotPage from './Pages/SpotPage';
 import AccomodationPage from './Pages/AccomodationPage';
 import GuidePage from './Pages/GuidePage';
-import Chatbox from '../virtualAssistance/Chatbox';
+import Chatbox from './virtualAssistance/Chatbox';
 
 const Layout = () => {
   return (
