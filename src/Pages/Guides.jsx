@@ -53,7 +53,7 @@ const Guides = () => {
     return (
         <div className="p-8">
             <h1 style={{ color: colors.primary }} className="text-3xl text-center font-bold mb-6">
-                Explore guides in the {city}
+                Explore guides in {city}
             </h1>
 
             <div className="xl:w-2/3 flex flex-wrap justify-center items-center gap-y-5 gap-x-5 mb-4 mx-auto">

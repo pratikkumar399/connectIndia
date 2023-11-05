@@ -67,7 +67,7 @@ const AccomodationPage = () => {
                     stripeKey="pk_test_51NOQr6SDTAaBjofmX1mGe1bJQPlCuX8GObCKd4uEaYOlnSRraiyKyLD22wDHz3VDxVofEHIvuBSztjHDiaSAyxIp003LfD2VZY"
                     name="Guide Price"
                     amount={totalPrice * 100}
-                    label="Pay to Guide"
+                    label="Pay to book"
                     description={`Your total is $${totalPrice}`}
                     token={handleToken}
                 />

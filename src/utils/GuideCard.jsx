@@ -29,10 +29,12 @@ const GuideCard = () => {
                             />
                             <div className="py-6 px-8 rounded-lg bg-white">
                                 <h1 className="text-gray-700 font-bold text-2xl mb-3 hover:text-gray-900 hover:cursor-pointer">
-                                    I'm super dog for you.
+                                    I'm a super guide for you!
                                 </h1>
-                                <p className="text-gray-700 tracking-wide">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, labore. Ea debitis beatae sequi deleniti.
+                                <p className="text-gray-700 tracking-wide m-2">
+                                    Hello! I am the one you were looking for to make your journey a bliss!
+                                    <br />
+                                    Experience:4 yrs
                                 </p>
                                 <StripeCheckout
                                     stripeKey="pk_test_51NOQr6SDTAaBjofmX1mGe1bJQPlCuX8GObCKd4uEaYOlnSRraiyKyLD22wDHz3VDxVofEHIvuBSztjHDiaSAyxIp003LfD2VZY"
